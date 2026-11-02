@@ -1,0 +1,25 @@
+# Qt Creator 个人配置（包含本机编译器路径，不应提交）
+*.pro.user
+*.pro.user.*
+
+# 构建输出目录
+build-*/
+debug/
+release/
+
+# qmake / 编译器生成物
+Makefile
+Makefile.*
+.qmake.stash
+*.o
+*.obj
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+object_script.*
+*.exe
+*.dll
+*.a
+
+# 翻译编译产物（.ts 源文件需要保留）
+*.qm

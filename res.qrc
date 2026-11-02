@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/about.svg</file>
+        <file>img/check-all.svg</file>
+        <file>img/cib-stackbit.svg</file>
+        <file>img/cil-font.svg</file>
+        <file>img/cil-save.svg</file>
+        <file>img/copy.svg</file>
+        <file>img/cut.svg</file>
+        <file>img/display.svg</file>
+        <file>img/file-font-fill.svg</file>
+        <file>img/fonts.svg</file>
+        <file>img/news.svg</file>
+        <file>img/opened_folder.svg</file>
+        <file>img/paint-bucket.svg</file>
+        <file>img/replace.svg</file>
+        <file>img/reply.svg</file>
+        <file>img/save.svg</file>
+        <file>img/search.svg</file>
+        <file>img/sticky.svg</file>
+        <file>img/text-wrap.svg</file>
+        <file>img/tool.svg</file>
+        <file>img/transfer-out.svg</file>
+        <file>img/undo.svg</file>
+        <file>img/arrow-back-up.svg</file>
+        <file>img/arrow-forward-up.svg</file>
+        <file>img/journal-richtext.svg</file>
+    </qresource>
+</RCC>
