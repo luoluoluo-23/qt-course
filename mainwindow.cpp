@@ -48,3 +48,27 @@ void MainWindow::on_actionReplace_triggered()
     dlg.exec();
 }
 
+
+void MainWindow::on_actionNew_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionOpen_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionSaveAs_triggered()
+{
+
+}
+
+
+void MainWindow::on_actionSave_triggered()
+{
+
+}
+

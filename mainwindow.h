@@ -23,6 +23,14 @@ private slots:
 
     void on_actionReplace_triggered();
 
+    void on_actionNew_triggered();
+
+    void on_actionOpen_triggered();
+
+    void on_actionSaveAs_triggered();
+
+    void on_actionSave_triggered();
+
 private:
     Ui::MainWindow *ui;
 
