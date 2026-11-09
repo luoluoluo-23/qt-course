@@ -67,13 +67,13 @@
     <property name="title">
      <string>格式(&amp;O)</string>
     </property>
-    <addaction name="actionD"/>
+    <addaction name="actionLineWrap"/>
     <addaction name="actionrow"/>
     <addaction name="actionFont"/>
-    <addaction name="actionA"/>
+    <addaction name="actionFontColor"/>
     <addaction name="separator"/>
-    <addaction name="actionC"/>
-    <addaction name="actionB"/>
+    <addaction name="actionFontBackgroundColor"/>
+    <addaction name="actionBackgourndColor"/>
    </widget>
    <widget class="QMenu" name="menu_V">
     <property name="title">
@@ -121,7 +121,7 @@
    <addaction name="separator"/>
    <addaction name="actionFont"/>
    <addaction name="actionrow"/>
-   <addaction name="actionD"/>
+   <addaction name="actionLineWrap"/>
    <addaction name="separator"/>
    <addaction name="actionToolbar"/>
    <addaction name="actionStatusbar"/>
@@ -297,7 +297,7 @@
     <string>字体</string>
    </property>
   </action>
-  <action name="actionD">
+  <action name="actionLineWrap">
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/img/text-wrap.svg</normaloff>:/img/text-wrap.svg</iconset>
@@ -390,7 +390,7 @@
     <string>Ctrl+L</string>
    </property>
   </action>
-  <action name="actionA">
+  <action name="actionFontColor">
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/img/fonts.svg</normaloff>:/img/fonts.svg</iconset>
@@ -402,7 +402,7 @@
     <string>字体颜色</string>
    </property>
   </action>
-  <action name="actionB">
+  <action name="actionBackgourndColor">
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/img/paint-bucket.svg</normaloff>:/img/paint-bucket.svg</iconset>
@@ -414,7 +414,7 @@
     <string>编辑器背景色</string>
    </property>
   </action>
-  <action name="actionC">
+  <action name="actionFontBackgroundColor">
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/img/file-font-fill.svg</normaloff>:/img/file-font-fill.svg</iconset>

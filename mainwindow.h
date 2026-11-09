@@ -31,10 +31,41 @@ private slots:
 
     void on_actionSave_triggered();
 
+    void on_plainTextEdit_textChanged();
+
+    void on_actionUndo_triggered();
+
+    void on_actionCut_triggered();
+
+    void on_actionCopy_triggered();
+
+    void on_actionPaste_triggered();
+
+    void on_actionRedo_triggered();
+
+    void on_plainTextEdit_copyAvailable(bool b);
+
+    void on_plainTextEdit_redoAvailable(bool b);
+
+    void on_plainTextEdit_undoAvailable(bool b);
+
+    void on_actionFontBackgroundColor_triggered();
+
+    void on_actionFontColor_triggered();
+
+    void on_actionLineWrap_triggered();
+
+    void on_actionBackgourndColor_triggered();
+
 private:
     Ui::MainWindow *ui;
 
     QLabel statusCursorLabel;
     QLabel statusLabel;
+
+    QString filePath;
+    bool textChanged;
+
+    bool userEditConfirmed();
 };
 #endif // MAINWINDOW_H
