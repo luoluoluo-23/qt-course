@@ -17,7 +17,7 @@
    <property name="layoutDirection">
     <enum>Qt::LeftToRight</enum>
    </property>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="CodeEditor" name="plainTextEdit">
     <property name="geometry">
      <rect>
       <x>-7</x>
@@ -427,6 +427,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CodeEditor</class>
+   <extends>QPlainTextEdit</extends>
+   <header>codeeditor.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="res.qrc"/>
  </resources>
