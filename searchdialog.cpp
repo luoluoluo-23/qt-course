@@ -1,14 +1,14 @@
-#include "finddialog.h"
-#include "ui_finddialog.h"
+#include "searchdialog.h"
+#include "ui_searchdialog.h"
 
 #include <QPlainTextEdit>
 #include <QTextCursor>
 #include <QMessageBox>
 #include <QApplication>
 
-FindDialog::FindDialog(QPlainTextEdit *editor, QWidget *parent)
+SearchDialog::SearchDialog(QPlainTextEdit *editor, QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::FindDialog)
+    , ui(new Ui::SearchDialog)
     , m_editor(editor)
 {
     ui->setupUi(this);
@@ -28,12 +28,12 @@ FindDialog::FindDialog(QPlainTextEdit *editor, QWidget *parent)
     ui->lineEdit->selectAll();
 }
 
-FindDialog::~FindDialog()
+SearchDialog::~SearchDialog()
 {
     delete ui;
 }
 
-bool FindDialog::findNext(bool showTip)
+bool SearchDialog::findNext(bool showTip)
 {
     if (m_editor == nullptr)
         return false;
@@ -72,12 +72,12 @@ bool FindDialog::findNext(bool showTip)
     return false;
 }
 
-void FindDialog::on_btFindnext_clicked()
+void SearchDialog::on_btFindnext_clicked()
 {
     findNext(true);
 }
 
-void FindDialog::on_pushButton_clicked()
+void SearchDialog::on_pushButton_clicked()
 {
     reject();
 }

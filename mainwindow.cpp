@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "aboutdialog.h"
-#include "finddialog.h"
+#include "searchdialog.h"
 #include "replacedialog.h"
 #include "codeeditor.h"
 
@@ -279,7 +279,7 @@ void MainWindow::on_plainTextEdit_undoAvailable(bool b)
 
 void MainWindow::on_actionFind_triggered()
 {
-    FindDialog dlg(ui->plainTextEdit, this);
+    SearchDialog dlg(ui->plainTextEdit, this);
     dlg.exec();
 }
 
