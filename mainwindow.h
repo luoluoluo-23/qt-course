@@ -10,6 +10,7 @@ namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
 class QCloseEvent;
+class QTextCharFormat;
 
 class MainWindow : public QMainWindow
 {
@@ -88,6 +89,9 @@ private:
 
     /// 若文件被修改过则询问用户是否保存，返回 false 表示用户取消了操作
     bool userEditConfirmed();
+
+    /// 把字符格式（颜色/背景色）应用到选中的文字；没有选中时应用到整篇
+    void applyCharFormat(const QTextCharFormat &fmt);
 
     Ui::MainWindow *ui;
 

@@ -308,10 +308,9 @@ void MainWindow::on_actionFontColor_triggered()
     if (!color.isValid())
         return;
 
-    // 只改选中文字的前景色；没有选中时对之后输入的文字生效
     QTextCharFormat fmt;
     fmt.setForeground(color);
-    ui->plainTextEdit->mergeCurrentCharFormat(fmt);
+    applyCharFormat(fmt);
 }
 
 void MainWindow::on_actionFontBackgroundColor_triggered()
@@ -323,6 +322,29 @@ void MainWindow::on_actionFontBackgroundColor_triggered()
 
     QTextCharFormat fmt;
     fmt.setBackground(color);
+    applyCharFormat(fmt);
+}
+
+void MainWindow::applyCharFormat(const QTextCharFormat &fmt)
+{
+    QTextCursor cursor = ui->plainTextEdit->textCursor();
+
+    if (cursor.hasSelection()) {
+        // 只改选中的文字
+        cursor.mergeCharFormat(fmt);
+        // 应用后取消选中：选中的文字在被选中时是用高亮色绘制的，
+        // 不取消选中就看不出字体颜色变了，容易误以为功能没反应
+        cursor.clearSelection();
+        ui->plainTextEdit->setTextCursor(cursor);
+        ui->plainTextEdit->mergeCurrentCharFormat(fmt);
+        return;
+    }
+
+    // 没有选中任何文字时，直接作用到整篇，保证点了就有反应；
+    // 同时对之后输入的文字也生效
+    QTextCursor all = cursor;
+    all.select(QTextCursor::Document);
+    all.mergeCharFormat(fmt);
     ui->plainTextEdit->mergeCurrentCharFormat(fmt);
 }
 
